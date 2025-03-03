@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Scolaire - Gestion des Étudiants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="signupSection">
+            <h1>Inscription</h1>
+            <form id="signupForm">
+                <input type="text" id="newUsername" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="newPassword" placeholder="Mot de passe" required>
+                <button type="submit">Créer un compte</button>
+                <p>Déjà un compte ? <a href="#" id="showLogin">Se connecter</a></p>
+            </form>
+        </div>
+
+        <div id="loginSection" style="display: none;">
+            <h1>Connexion</h1>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+                <p>Pas encore de compte ? <a href="#" id="showSignup">S'inscrire</a></p>
+            </form>
+        </div>
+
+        <div id="studentSection" style="display: none;">
+            <h1>Gestion des Étudiants</h1>
+            <button id="loadStudents">Charger les Étudiants</button>
+
+            <h2>Ajouter un Étudiant</h2>
+            <form id="studentForm">
+                <input type="text" id="studentName" placeholder="Nom de l'étudiant" required>
+                <input type="number" id="studentAge" placeholder="Âge" required>
+                <button type="submit">Ajouter</button>
+            </form>
+
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Âge</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
